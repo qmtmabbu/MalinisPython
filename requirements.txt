@@ -1,0 +1,17 @@
+Flask
+pyclamd
+pandas
+scapy
+opencv-python
+joblib
+scikit-learn
+quart
+torch
+torchvision
+
+split-folders
+streamlit
+pyngrok
+tensorflow
+matplotlib
+mysql-connector-python
