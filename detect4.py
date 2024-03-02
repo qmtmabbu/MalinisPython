@@ -4,7 +4,7 @@ import os
 import numpy as np
 from PIL import Image
 from scapy.layers.http import HTTP
-from scapy.layers.http import HTTPS
+import pyclamd
 from tensorflow.keras.models import load_model
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
@@ -13,10 +13,13 @@ import mysql.connector
 db_connection = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Develop@2021",
-    database="sentineldb"
+    password="local",
+    database="malinisdb"
 )
 
+
+# Initialize PyClamd with TCP/IP socket
+cd = pyclamd.ClamdNetworkSocket()
 
 # Load the trained model
 MODEL_INPUT_SHAPE = (150, 150, 3)
@@ -28,6 +31,8 @@ log_file_path = ""
 # Create directory to store images if not exists
 current_id = ""
 images_path = "./packet_images"
+malwareName = ""
+affected = ""
 
 def create_images_directory(id):
     global images_path
@@ -52,12 +57,10 @@ def preprocess_payload(payload):
 # Function to convert packet data to image
 def packet_to_image(packet):
     try:
-        # Scale packet length to pixel intensity (0-255)
-        pixel_intensity = min(int(packet.len / 10), 255)
-        # Create a new grayscale image
+        # Scale packet length to determine intensity range
+        intensity_range = min(int(packet.len / 10), 255)
         image = Image.new('L', (100, 100))
-        # Set pixel values based on intensity
-        pixels = [pixel_intensity] * (100 * 100)
+        pixels = [random.randint(0, intensity_range) for _ in range(100 * 100)]
         image.putdata(pixels)
         return image
     except Exception as e:
@@ -66,22 +69,35 @@ def packet_to_image(packet):
     
 def process_packet(packet):
     global log_file_path
+    global malwareName
+    global affected
     try:
-         # Convert packet to image
+        packetType = "Unknown"
+
+        if packet.haslayer(Raw):  # Check for Raw layer (contains file data)
+            file_payload = bytes(packet[Raw])
+            # Scan the file payload for malware using PyClamd
+            malware_scan_result = cd.scan_stream(file_payload)
+            if malware_scan_result['stream'] == 'OK':
+                print("No malware detected in the file payload.")
+            else:
+                print("Malware detected in the file payload:", malware_scan_result['stream'])
+                # malwareName = f"{malwareName},{malware_scan_result['stream']}"
+                # affected = file_payload
+                saveToDb(malware_scan_result['stream'],file_payload)
+        
+        # Convert packet to image
         img = packet_to_image(packet)
         if img is None:
             print("Error converting packet to image.")
             return
         image_array = np.array(img) / 255.0
-        
-        packetType = "Unknown"
 
         if image_array is not None:
             # Use the loaded classifier to predict whether the image is malware or not
             image_array = np.resize(image_array, MODEL_INPUT_SHAPE)
             prediction = classifier.predict(np.expand_dims(image_array, axis=0))
 
-           
             image_path = os.path.join(images_path, current_id, f"packet_{packet.time}.png")
             img.save(image_path)
 
@@ -107,22 +123,6 @@ def process_packet(packet):
                 packetType = "Non-Image"
                 print("Packet payload could not be preprocessed as an image")
 
-        if packet.haslayer(HTTPS):  # Check for HTTP layer
-            https_payload = bytes(packet[HTTPS])
-            if b'Content-Type: image' in https_payload:
-                packetType = "Image"
-            elif b'Content-Type: audio' in https_payload:
-                packetType = "Audio"
-            elif b'Content-Type: video' in https_payload:
-                packetType = "Video"
-            elif b'Host: unsplash.com' in https_payload:  # Check if the host is unsplash.com
-                packetType = "Image (From unsplash.com)"
-            elif b'images.unsplash.com.' in https_payload:  # Check if the host is unsplash.com
-                packetType = "Image"
-            else:
-                packetType = "Non-Image"
-                print("Packet payload could not be preprocessed as an image")
-
         # Write packet details to the log file
         with open(log_file_path, "a") as log_file:
             log_file.write(f"Packet Type: {packetType}\t,Packet Details: {packet.summary()}\n")
@@ -135,32 +135,64 @@ def packet_callback(packet):
     # Submit packet processing to thread pool
     executor.submit(process_packet, packet)
 
+def scan_downloads_folder():
+    global malwareName
+    global affected
+    downloads_folder = "C:\\Users\\Mark\\Downloads"  # Update with your downloads folder path
+    print("Scanning Downloads folder for malware...")
+    for filename in os.listdir(downloads_folder):
+        file_path = os.path.join(downloads_folder, filename)
+        if os.path.isfile(file_path):
+            print(f"Scanning file: {filename}")
+            # Scan file for malware using ClamAV
+            scan_result = cd.scan_file(file_path)
+            if scan_result is not None:
+                print(scan_result)
+                if scan_result.get(file_path) == 'OK':
+                    print("No malware detected in:", filename)
+                else:
+                    print("Malware detected in:", filename, ":", scan_result.get(file_path))
+                    # malwareName = f"{malwareName},{scan_result.get(file_path)}"
+                    # affected = file_path
+                    saveToDb(scan_result.get(file_path)[1],file_path)
+            else:
+                print("Scan result is None for:", filename,file_path)
+           
+def saveToDb(malwareName, affected):
+    print("Saving ...")
+    cursor = db_connection.cursor()
+    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    if malwareName is not None:
+        cursor.execute("INSERT INTO detections (userID, malwareName, affected, created_at, updated_at) VALUES (%s, %s, %s, %s, %s)",
+        (current_id, malwareName, affected, current_time,current_time))
+    else:
+        cursor.execute("INSERT INTO detections (userID, malwareName, affected, created_at, updated_at) VALUES (%s, %s, %s, %s, %s)",
+        (current_id, f"None", "None", current_time,current_time))
+    
+    db_connection.commit()
+    cursor.close()
+
 try:
+   
     current_id = sys.argv[1] if len(sys.argv) > 1 else 'default_id'
     log_file_path = f"./logs/{current_id}.txt"
     create_images_directory(current_id)
     # Delete old log file if it exists
     if os.path.exists(log_file_path):
         os.remove(log_file_path)
-
+    scan_downloads_folder()
     # Open the log file in append mode
     with open(log_file_path, "a") as log_file:
         # Create a ThreadPoolExecutor
         executor = ThreadPoolExecutor(max_workers=5)
         # Start packet capture
-        sniff(iface='Wi-Fi', prn=packet_callback, timeout=5)
+        sniff(prn=packet_callback, timeout=5)
 
 except Exception as e:
     print(f"Error: {e}")
 
 finally:
-    print("Saving ...")
-    cursor = db_connection.cursor()
-    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    cursor.execute("INSERT INTO detections (userID, malwareName, affected, created_at, updated_at) VALUES (%s, %s, %s, %s, %s)",
-    (current_id, f"None", "None", current_time,current_time))
-    db_connection.commit()
-    cursor.close()
 
     if db_connection.is_connected():
         db_connection.close()
+

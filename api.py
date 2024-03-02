@@ -42,7 +42,7 @@ async def start_camera():
         return jsonify({"message": "IP address is missing in the request parameters"}), 400
     
     if id:
-        command =  f"start cmd /k \"cd /d D:\\work\\pythonMalwareDetectionApp && activate && python detect3.py {id}\""
+        command =  f"start cmd /k \"cd /dC:\\Users\\Mark\\Documents\\pythonMalwareDetectionApp-main && .\\Scripts\\activate && python detect4.py {id}\""
         subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return jsonify({"id": id, "status": "success"}), 200
     else:
@@ -101,13 +101,31 @@ async def get_sniff_logs():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
+@app.route('/delete_file/<path:file_path>', methods=['GET'])
+async def delete_file(file_path):
+    
+    try:
+        directory = os.path.dirname(file_path)
+        filename = os.path.basename(file_path)
+        command =  f"start cmd /k \"cd /d{directory} && rimraf ./{filename}\""
+        subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # Check if the file exists
+        # if os.path.exists(file_path):
+        #     # Attempt to delete the file
+        #     os.remove(file_path)
+        return jsonify({'message': f'File {file_path} deleted successfully'}), 200
+        # else:
+        #     return jsonify({'message': f'File {file_path} does not exist'}), 404
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+    
 async def schedule_packet_sniffer():
     await packet_sniffer()
 
 if __name__ == '__main__':
     local_ip = get_local_ip()  # Get the local IP address dynamically
     if local_ip:
-        command =  f"start cmd /k \"cd /d D:\\work\\pythonMalwareDetectionApp && activate && python sniff.py\""
+        command =  f"start cmd /k \"cd /dC:\\Users\\Mark\\Documents\\pythonMalwareDetectionApp-main && .\\Scripts\\activate && python sniff.py\""
         subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         app.run(host=local_ip, debug=True)
         
