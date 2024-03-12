@@ -6,12 +6,17 @@ import subprocess
 import socket  # Import the socket library
 from quart_cors import cors
 import datetime
+import os
+import uuid
+import random
+import string
 
 app = Quart(__name__)
 app = cors(app)
 
 ip_started = {}
-
+output_directory = "runs"
+os.makedirs(output_directory, exist_ok=True)
 
 def is_rtsp_accessible(rtsp_url):
     try:
@@ -33,6 +38,11 @@ def get_local_ip():
     except Exception as e:
         print(f"Error getting local IP: {e}")
         return None
+    
+def generate_random_uuid(length):
+    # Generate a random string of characters
+    random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=length))
+    return random_string
 
 # Endpoint to retrieve users
 @app.route('/detect', methods=['GET'])
@@ -41,17 +51,31 @@ async def start_camera():
     if not id:
         return jsonify({"message": "IP address is missing in the request parameters"}), 400
     
+    muid=generate_random_uuid(6)
+
     if id:
-        command =  f"start cmd /k \"cd /dC:\\Users\\Mark\\Documents\\pythonMalwareDetectionApp-main && .\\Scripts\\activate && python detect4.py {id}\""
+        #command =  f"start cmd /k \"cd /dC:\\Users\\Mark\\Documents\\pythonMalwareDetectionApp-main && .\\Scripts\\activate && python detect4.py {id}\""
+        command =  f"cd /dC:\\Users\\Mark\\Documents\\pythonMalwareDetectionApp-main && .\\Scripts\\activate && python detect4.py {id} {muid}\""
         subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        return jsonify({"id": id, "status": "success"}), 200
+        stdout2_log = os.path.join(output_directory, f'detect_output_{muid}.txt')
+        stderr2_log = os.path.join(output_directory, f"detecterr_{muid}.log")
+        with open(stdout2_log, "w") as out, open(stderr2_log, "w") as err:
+            # Execute the command
+            subprocess.Popen(command, shell=True, stdout=out, stderr=err, creationflags=subprocess.CREATE_NO_WINDOW)
+
+        return jsonify({"uuid": muid, "status": "success"}), 200
     else:
         return jsonify({"id": id, "status": "failed"}), 500
     
 
 @app.route('/logs/<path:filename>', methods=['GET'])
 async def get_logs(filename):
-    return await send_from_directory('./logs', filename)
+    isLog = request.args.get('isLog')  # Get the 'ip' parameter from the request query string
+    if isLog:
+        return await send_from_directory('./runs', filename)
+    else:
+        return await send_from_directory('./logs', filename)
+    
 
 @app.route('/get_image/<path:filename>/<path:userid>', methods=['GET'])
 async def get_images(filename,userid):
@@ -63,8 +87,8 @@ def packet_sniffer():
         with open(f'sniff/packet_logs_{datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.txt', 'a') as f:
             f.write(str(packets) + '\n')
 
-@app.route('/image/<int:userid>')
-async def serve_images(userid):
+@app.route('/image/<path:userid>/<path:logid>')
+async def serve_images(userid,logid):
     local_ip = get_local_ip()
     user_directory = os.path.join("./packet_images", str(userid))
     
@@ -73,7 +97,7 @@ async def serve_images(userid):
         return "User not found", 404
     
     # Get list of image files in the user directory
-    image_files = [filename for filename in os.listdir(user_directory) if filename.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
+    image_files = [filename for filename in os.listdir(user_directory) if filename.endswith((f'{logid}.jpg', f'{logid}.jpeg', f'{logid}.png', f'{logid}.gif'))]
     
     # Create HTML grid to display the images
     html_content = '<div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 5px;">'
@@ -107,27 +131,59 @@ async def delete_file(file_path):
     try:
         directory = os.path.dirname(file_path)
         filename = os.path.basename(file_path)
-        command =  f"start cmd /k \"cd /d{directory} && rimraf ./{filename}\""
-        subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        try:
+            command =  f"cd /d{directory} && del {filename}\""
+            stdout_log = os.path.join(output_directory, "removeout.log")
+            stderr_log = os.path.join(output_directory, "removeerr.log")
+            with open(stdout_log, "w") as out, open(stderr_log, "w") as err:
+                # Execute the command
+                subprocess.Popen(command, shell=True, stdout=out, stderr=err, creationflags=subprocess.CREATE_NO_WINDOW)
+            return jsonify({'message': f'File {file_path} deleted successfully'}), 200
+        except Exception as e2:
+            print("")
+            return jsonify({'error': str(e)}), 500
         # Check if the file exists
         # if os.path.exists(file_path):
         #     # Attempt to delete the file
         #     os.remove(file_path)
-        return jsonify({'message': f'File {file_path} deleted successfully'}), 200
         # else:
         #     return jsonify({'message': f'File {file_path} does not exist'}), 404
     except Exception as e:
         return jsonify({'error': str(e)}), 500
     
+@app.route('/check', methods=['GET'])
+async def checkscan():
+    filename = request.args.get('filename')
+    if not filename:
+        return jsonify({'error': 'Filename not provided'}), 400
+
+    try:
+        with open(f'runs/detect_output_{filename}.txt', 'r') as file:
+            content = file.read()
+            if "SCANNING END" in content:
+                return jsonify({'scan_ended': True}), 200
+            else:
+                return jsonify({'scan_ended': False}), 200
+    except FileNotFoundError:
+        return jsonify({'error': 'File not found'}), 404
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+        
 async def schedule_packet_sniffer():
     await packet_sniffer()
 
 if __name__ == '__main__':
     local_ip = get_local_ip()  # Get the local IP address dynamically
     if local_ip:
-        command =  f"start cmd /k \"cd /dC:\\Users\\Mark\\Documents\\pythonMalwareDetectionApp-main && .\\Scripts\\activate && python sniff.py\""
-        subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # command =  f"start cmd /k \"cd /dC:\\Users\\Mark\\Documents\\pythonMalwareDetectionApp-main && .\\Scripts\\activate && python sniff.py\""
+        command =  f"cd /d C:\\Users\\Mark\\Documents\\pythonMalwareDetectionApp-main && .\\Scripts\\activate && python sniff.py"
+        #subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # Redirecting stdout and stderr to files
+        stdout_log = os.path.join(output_directory, "stdout.log")
+        stderr_log = os.path.join(output_directory, "stderr.log")
+        with open(stdout_log, "w") as out, open(stderr_log, "w") as err:
+            # Execute the command
+            subprocess.Popen(command, shell=True, stdout=out, stderr=err, creationflags=subprocess.CREATE_NO_WINDOW)
         app.run(host=local_ip, debug=True)
-        
     else:
         print("Failed to retrieve local IP address.")

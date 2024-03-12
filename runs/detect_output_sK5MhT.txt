@@ -1,0 +1,935 @@
+Scanning Downloads folder for malware...
+Scanning file: 005526de4599f96a4a1eba9de9d6ad930de13d5ea1a23fada26e1575f4e3cf85
+Scan result is None for: 005526de4599f96a4a1eba9de9d6ad930de13d5ea1a23fada26e1575f4e3cf85 C:\Users\Mark\Downloads\005526de4599f96a4a1eba9de9d6ad930de13d5ea1a23fada26e1575f4e3cf85
+Scanning file: Alapelle.zip
+Scan result is None for: Alapelle.zip C:\Users\Mark\Downloads\Alapelle.zip
+Scanning file: Backdoor.zip
+Scan result is None for: Backdoor.zip C:\Users\Mark\Downloads\Backdoor.zip
+Scanning file: desktop.ini
+Scan result is None for: desktop.ini C:\Users\Mark\Downloads\desktop.ini
+Scanning file: PWS.zip
+Scan result is None for: PWS.zip C:\Users\Mark\Downloads\PWS.zip
+Scanning file: Windows Activator.7z
+Scan result is None for: Windows Activator.7z C:\Users\Mark\Downloads\Windows Activator.7z
+Scanning file: Worm.zip
+Scan result is None for: Worm.zip C:\Users\Mark\Downloads\Worm.zip
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: Unable to scan stream
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 3s 3s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 2s 2s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 2s 2s/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 2s 2s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 4s 4s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 3s 3s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 3s 3s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 3s 3s/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 869ms/step
+The incoming packet is predicted as non-malware.The incoming packet is predicted as non-malware.
+
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 929ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 2s 2s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 143.244.33.72:https > 10.0.2.15:50643 PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Saving ...
+SCANNING END
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 930ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 990ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 845ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 948ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 899ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 766ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 675ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 787ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 835ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Error processing packet: 'NoneType' object is not subscriptableEther / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 835ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 900ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 880ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 959ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 916ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 833ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 777ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 918ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:49679 > 52.226.139.180:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 878ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 858ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 789ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 721ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 767ms/step
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 890ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 821ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 52.226.139.180:https > 10.0.2.15:49679 PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 897ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 873ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 896ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 908ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 997ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 971ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 815ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 788ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 873ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 983ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 952ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 766ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 734ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 824ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 840ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 882ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 798ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 897ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 932ms/step
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 775ms/step
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 921ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 671ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 563ms/step
+
+1/1 [==============================] - 1s 918ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 667ms/step
+
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptableThe incoming packet is predicted as non-malware.
+
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 537ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 512ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 2s 2s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 625ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 733ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 828ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 811ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 930ms/step
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 569ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 641ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 608ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 610ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 572ms/step
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 727ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 819ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 610ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 772ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 862ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 688ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 751ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 848ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 722ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 797ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 903ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 853ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 881ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: Unable to scan stream
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 747ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 991ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 999ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 997ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 889ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 917ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 916ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 862ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 944ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 948ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 948ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:50643 > 143.244.33.72:https PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 964ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 1s/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 918ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 884ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 703ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 523ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 481ms/step
+The incoming packet is predicted as non-malware.

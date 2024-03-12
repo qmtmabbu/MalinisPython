@@ -33,6 +33,8 @@ current_id = ""
 images_path = "./packet_images"
 malwareName = ""
 affected = ""
+numberOfDetected = 0
+count = 0
 
 def create_images_directory(id):
     global images_path
@@ -57,10 +59,10 @@ def preprocess_payload(payload):
 # Function to convert packet data to image
 def packet_to_image(packet):
     try:
-        # Scale packet length to determine intensity range
-        intensity_range = min(int(packet.len / 10), 255)
+        # Introduce more randomness and specific patterns
+        pLength = packet.len if packet.len > 0 else 200
         image = Image.new('L', (100, 100))
-        pixels = [random.randint(0, intensity_range) for _ in range(100 * 100)]
+        pixels = [random.randint(0, int(255-pLength)) if random.random() > 0.1 else random.choice([0, 255]) for _ in range(100 * 100)]
         image.putdata(pixels)
         return image
     except Exception as e:
@@ -71,6 +73,9 @@ def process_packet(packet):
     global log_file_path
     global malwareName
     global affected
+    global numberOfDetected
+    global muid
+    global count
     try:
         packetType = "Unknown"
 
@@ -84,6 +89,7 @@ def process_packet(packet):
                 print("Malware detected in the file payload:", malware_scan_result['stream'])
                 # malwareName = f"{malwareName},{malware_scan_result['stream']}"
                 # affected = file_payload
+                numberOfDetected += 1
                 saveToDb(malware_scan_result['stream'],file_payload)
         
         # Convert packet to image
@@ -97,15 +103,17 @@ def process_packet(packet):
             # Use the loaded classifier to predict whether the image is malware or not
             image_array = np.resize(image_array, MODEL_INPUT_SHAPE)
             prediction = classifier.predict(np.expand_dims(image_array, axis=0))
-
-            image_path = os.path.join(images_path, current_id, f"packet_{packet.time}.png")
-            img.save(image_path)
-
+            count +=1
+            image_path = os.path.join(images_path, current_id, f"packet_{count}_{muid}.png")
+            if img is not None:
+                img.save(image_path)
             # Display the prediction
             if prediction[0][0] > 0.5:  # Adjust threshold as needed
                 print("The incoming packet is predicted as malware.")
             else:
                 print("The incoming packet is predicted as non-malware.")
+            
+            
 
         if packet.haslayer(HTTP):  # Check for HTTP layer
             http_payload = bytes(packet[HTTP])
@@ -138,36 +146,42 @@ def packet_callback(packet):
 def scan_downloads_folder():
     global malwareName
     global affected
+    global numberOfDetected
     downloads_folder = "C:\\Users\\Mark\\Downloads"  # Update with your downloads folder path
     print("Scanning Downloads folder for malware...")
     for filename in os.listdir(downloads_folder):
-        file_path = os.path.join(downloads_folder, filename)
-        if os.path.isfile(file_path):
-            print(f"Scanning file: {filename}")
-            # Scan file for malware using ClamAV
-            scan_result = cd.scan_file(file_path)
-            if scan_result is not None:
-                print(scan_result)
-                if scan_result.get(file_path) == 'OK':
-                    print("No malware detected in:", filename)
+        try:
+            file_path = os.path.join(downloads_folder, filename)
+            if os.path.isfile(file_path):
+                print(f"Scanning file: {filename}")
+                # Scan file for malware using ClamAV
+                scan_result = cd.scan_file(file_path)
+                if scan_result is not None:
+                    print(scan_result)
+                    if scan_result.get(file_path) == 'OK':
+                        print("No malware detected in:", filename)
+                    else:
+                        print("Malware detected in:", filename, ":", file_path)
+                        # malwareName = f"{malwareName},{scan_result.get(file_path)}"
+                        # affected = file_path
+                        numberOfDetected += 1
+                        saveToDb(scan_result.get(file_path)[1],file_path)
                 else:
-                    print("Malware detected in:", filename, ":", scan_result.get(file_path))
-                    # malwareName = f"{malwareName},{scan_result.get(file_path)}"
-                    # affected = file_path
-                    saveToDb(scan_result.get(file_path)[1],file_path)
-            else:
-                print("Scan result is None for:", filename,file_path)
+                    print("Scan result is None for:", filename,file_path)
+        except Exception as e:
+            print(f"Error Scanning File: {e}")
            
 def saveToDb(malwareName, affected):
+    global muid
     print("Saving ...")
     cursor = db_connection.cursor()
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     if malwareName is not None:
-        cursor.execute("INSERT INTO detections (userID, malwareName, affected, created_at, updated_at) VALUES (%s, %s, %s, %s, %s)",
-        (current_id, malwareName, affected, current_time,current_time))
+        cursor.execute("INSERT INTO detections (userID, malwareName, affected,  logid, created_at, updated_at) VALUES (%s, %s, %s, %s,%s, %s)",
+        (current_id, malwareName, affected, muid, current_time,current_time))
     else:
-        cursor.execute("INSERT INTO detections (userID, malwareName, affected, created_at, updated_at) VALUES (%s, %s, %s, %s, %s)",
-        (current_id, f"None", "None", current_time,current_time))
+        cursor.execute("INSERT INTO detections (userID, malwareName, affected, logid, created_at, updated_at) VALUES (%s, %s, %s, %s,%s, %s)",
+        (current_id, f"None", "None", muid, current_time,current_time))
     
     db_connection.commit()
     cursor.close()
@@ -175,24 +189,30 @@ def saveToDb(malwareName, affected):
 try:
    
     current_id = sys.argv[1] if len(sys.argv) > 1 else 'default_id'
+    muid = sys.argv[2] if len(sys.argv) > 2 else ''
     log_file_path = f"./logs/{current_id}.txt"
     create_images_directory(current_id)
     # Delete old log file if it exists
-    if os.path.exists(log_file_path):
-        os.remove(log_file_path)
+    try:
+        if os.path.exists(log_file_path):
+            os.remove(log_file_path)
+    except Exception as e:
+        print("")
     scan_downloads_folder()
     # Open the log file in append mode
     with open(log_file_path, "a") as log_file:
         # Create a ThreadPoolExecutor
-        executor = ThreadPoolExecutor(max_workers=5)
+        executor = ThreadPoolExecutor(max_workers=8)
         # Start packet capture
-        sniff(prn=packet_callback, timeout=5)
+        sniff(prn=packet_callback, timeout=10)
+        if numberOfDetected==0:
+            saveToDb("None", "None")
+        print("SCANNING END")
 
 except Exception as e:
     print(f"Error: {e}")
 
 finally:
-
     if db_connection.is_connected():
         db_connection.close()
 

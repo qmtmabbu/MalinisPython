@@ -1,0 +1,83 @@
+Scanning Downloads folder for malware...
+Scanning file: Adware.zip
+Scan result is None for: Adware.zip C:\Users\Mark\Downloads\Adware.zip
+Scanning file: Alapelle.zip
+Scan result is None for: Alapelle.zip C:\Users\Mark\Downloads\Alapelle.zip
+Scanning file: Backdoor.zip
+Scan result is None for: Backdoor.zip C:\Users\Mark\Downloads\Backdoor.zip
+Scanning file: desktop.ini
+Scan result is None for: desktop.ini C:\Users\Mark\Downloads\desktop.ini
+Scanning file: PWS.zip
+Scan result is None for: PWS.zip C:\Users\Mark\Downloads\PWS.zip
+Scanning file: Riskware.zip
+Scan result is None for: Riskware.zip C:\Users\Mark\Downloads\Riskware.zip
+Scanning file: Windows Activator.7z
+Scan result is None for: Windows Activator.7z C:\Users\Mark\Downloads\Windows Activator.7z
+Scanning file: Worm.zip
+Scan result is None for: Worm.zip C:\Users\Mark\Downloads\Worm.zip
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:55983 > 104.208.16.90:https PA / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / TCP 10.0.2.15:55983 > 104.208.16.90:https PA / Raw
+Ether / IP / TCP 104.208.16.90:https > 10.0.2.15:55983 PA / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 688ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 839ms/step
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 1s 776ms/step
+The incoming packet is predicted as non-malware.
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / UDP 10.0.2.15:49340 > 216.239.38.120:https / Raw
+Error processing packet: Unable to scan stream
+Ether / IP / UDP 10.0.2.15:49340 > 216.239.38.120:https / Raw
+Error processing packet: Unable to scan stream
+Ether / IP / UDP 216.239.38.120:https > 10.0.2.15:49340 / Raw
+Error processing packet: Unable to scan stream
+Ether / IP / UDP 216.239.38.120:https > 10.0.2.15:49340 / Raw
+Error processing packet: Unable to scan stream
+Ether / IP / UDP 216.239.38.120:https > 10.0.2.15:49340 / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 79ms/step
+The incoming packet is predicted as non-malware.
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / UDP 10.0.2.15:49340 > 216.239.38.120:https / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / UDP 10.0.2.15:49340 > 216.239.38.120:https / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / UDP 216.239.38.120:https > 10.0.2.15:49340 / Raw
+Error processing packet: Unable to scan stream
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / UDP 216.239.38.120:https > 10.0.2.15:49340 / Raw
+Ether / IP / UDP 10.0.2.15:49340 > 216.239.38.120:https / Raw
+Error processing packet: 'NoneType' object is not subscriptable
+Error processing packet: 'NoneType' object is not subscriptable
+Ether / IP / UDP 216.239.38.120:https > 10.0.2.15:49340 / RawError processing packet: 'NoneType' object is not subscriptable
+
+Ether / IP / UDP 10.0.2.15:49340 > 216.239.38.120:https / Raw
+Ether / IP / UDP 216.239.38.120:https > 10.0.2.15:49340 / Raw
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 241ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 252ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 315ms/step
+The incoming packet is predicted as non-malware.
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 365ms/step
+The incoming packet is predicted as non-malware.
+Saving ...
+SCANNING END

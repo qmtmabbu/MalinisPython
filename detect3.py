@@ -4,7 +4,6 @@ import os
 import numpy as np
 from PIL import Image
 from scapy.layers.http import HTTP
-from scapy.layers.http import HTTPS
 from tensorflow.keras.models import load_model
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
@@ -13,8 +12,8 @@ import mysql.connector
 db_connection = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Develop@2021",
-    database="sentineldb"
+    password="local",
+    database="malinisdb"
 )
 
 
@@ -107,22 +106,6 @@ def process_packet(packet):
                 packetType = "Non-Image"
                 print("Packet payload could not be preprocessed as an image")
 
-        if packet.haslayer(HTTPS):  # Check for HTTP layer
-            https_payload = bytes(packet[HTTPS])
-            if b'Content-Type: image' in https_payload:
-                packetType = "Image"
-            elif b'Content-Type: audio' in https_payload:
-                packetType = "Audio"
-            elif b'Content-Type: video' in https_payload:
-                packetType = "Video"
-            elif b'Host: unsplash.com' in https_payload:  # Check if the host is unsplash.com
-                packetType = "Image (From unsplash.com)"
-            elif b'images.unsplash.com.' in https_payload:  # Check if the host is unsplash.com
-                packetType = "Image"
-            else:
-                packetType = "Non-Image"
-                print("Packet payload could not be preprocessed as an image")
-
         # Write packet details to the log file
         with open(log_file_path, "a") as log_file:
             log_file.write(f"Packet Type: {packetType}\t,Packet Details: {packet.summary()}\n")
@@ -148,7 +131,7 @@ try:
         # Create a ThreadPoolExecutor
         executor = ThreadPoolExecutor(max_workers=5)
         # Start packet capture
-        sniff(iface='Wi-Fi', prn=packet_callback, timeout=5)
+        sniff(prn=packet_callback, timeout=5)
 
 except Exception as e:
     print(f"Error: {e}")

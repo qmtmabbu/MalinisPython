@@ -54,13 +54,27 @@ def process_packet(packet):
                 image_array = preprocess_payload(payload)
                 if image_array is not None:
                     packetType = "Image"
-                elif packet.haslayer(HTTP):  # Check for HTTP layer
+                
+                if packet.haslayer(HTTP):  # Check for HTTP layer
                     http_payload = bytes(packet[HTTP])
-                    if b'Content-Type: image' in http_payload:
+                    print(f'Payload: {http_payload}')
+                    if b'youtube.com' in http_payload or b'googlevideo.com' in http_payload:
+                        packetType = "YouTube Video"
+                    elif b'Content-Type: image' in http_payload:
                         packetType = "Image"
                     elif b'Content-Type: audio' in http_payload:
                         packetType = "Audio"
+                        if b'audio/mpeg' in http_payload:
+                            packetType = "Audio (MP3)"
+                        # Add more audio formats as needed
                     elif b'Content-Type: video' in http_payload:
+                        packetType = "Video"
+                        if b'video/mp4' in http_payload:
+                            packetType = "Video (MP4)"
+                        # Add more video formats as needed
+                    elif b'rr1.sn-2aqu-jxcd.googlevideo.com.' in http_payload:
+                        packetType = "Video"
+                    elif b'youtube-ui.l.google.com.' in http_payload:
                         packetType = "Video"
                     elif b'Host: unsplash.com' in http_payload:  # Check if the host is unsplash.com
                         packetType = "Image (From unsplash.com)"
@@ -86,6 +100,54 @@ def process_packet(packet):
             if "images" in packet_details:
                 packetType = "Image"
                 print("The packet summary contains 'images'.")
+            elif 'rr1.sn-2aqu-jxcd.googlevideo.com.' in packet_details:
+                packetType = "Video"
+            elif 'youtube-ui.l.google.com.' in packet_details:
+                packetType = "Video"  
+            elif "play.google.com" in packet_details:
+                packetType = "Video"
+            elif "googlevideo.com" in packet_details:
+                packetType = "Video"
+            elif "image-scdn.cdn-gslb.spotify.com." in packet_details:
+                packetType = "Data"
+            elif "player.vimeo.com" in packet_details:
+                packetType = "Audio"
+            elif "124.106.174.89" in packet_details: #spotify
+                packetType = "Audio" 
+            elif "MP3" in packet_details: 
+                packetType = "Audio"
+            elif "mp3" in packet_details: 
+                packetType = "Audio"  
+            elif "MPEG4" in packet_details:
+                packetType = "Video"
+            elif "MP4" in packet_details:
+                packetType = "Video"
+            elif "HEVC" in packet_details:
+                packetType = "Video"
+            elif "MOV" in packet_details:
+                packetType = "Video"
+            elif "ProRes" in packet_details:
+                packetType = "Video"
+            elif "WMV" in packet_details:
+                packetType = "Video"
+            elif "AVI" in packet_details:
+                packetType = "Video"
+            elif "FV" in packet_details:
+                packetType = "Video"
+            elif "MPEG PS" in packet_details:
+                packetType = "Video"
+            elif "DNxHR" in packet_details:
+                packetType = "Video"
+            elif "3GPP" in packet_details:
+                packetType = "Video"
+            elif "CineForm" in packet_details:
+                packetType = "Video"
+            elif "WebM" in packet_details:
+                packetType = "Video"
+            elif "AVCHD" in packet_details:
+                packetType = "Video"
+            elif "MKV" in packet_details:
+                packetType = "Video"
 
             f.write(f"Packet Type: {packetType}||| Packet Details: {packet.summary()} ;;{current_time.strftime('%Y-%m-%d %H:%M:%S')}\n")
     except Exception as e:
@@ -95,7 +157,7 @@ def process_packet(packet):
 # Function to sniff packets and store them in a file
 async def packet_sniffer():
     while True:
-        packets = sniff(count=100, iface='Wi-Fi', prn=packet_callback, timeout=50)  # Adjust the count as per your requirement
+        packets = sniff(count=100, prn=packet_callback, timeout=50)  # Adjust the count as per your requirement
         # await asyncio.sleep(60)
 
 if __name__ == '__main__':
